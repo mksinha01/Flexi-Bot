@@ -148,3 +148,9 @@ cython_debug/
 *.swo
 *~
 .DS_Store
+
+# Project specific
+faiss_index*
+temp.pdf
+temp/
+*.pdf

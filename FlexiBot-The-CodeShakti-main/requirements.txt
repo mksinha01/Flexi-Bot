@@ -1,9 +1,0 @@
-boto3
-awscli
-pypdf
-langchain
-streamlit
-faiss-cpu
-langchain
-langchain-community
-PyPDF2
