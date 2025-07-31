@@ -32,11 +32,20 @@ Welcome to **FlexiBot**, an intelligent PDF chatbot built to simplify document i
 
 ```
 FlexiBot/  
-├── app.py                  # Main Streamlit application  
+├── app.py                   # Main Streamlit application  
+├── claude2.py              # Claude 2 model integration
+├── llama3.py               # Llama 3 model integration
 ├── requirements.txt        # List of dependencies  
-├── README.md               # Project documentation  
-├── faiss_index/            # Directory to store FAISS vector indices  
-└── temp/                   # Temporary storage for uploaded files  
+├── test.json              # Test configurations for AI models
+├── README.md              # Project documentation  
+├── CONTRIBUTING.md        # Contribution guidelines
+├── LICENSE                # MIT License
+├── .gitignore             # Git ignore patterns
+├── faiss_index/           # Directory to store FAISS vector indices (created at runtime)
+├── temp/                  # Temporary storage for uploaded files (created at runtime)
+└── .github/               # GitHub templates and workflows
+    ├── ISSUE_TEMPLATE/    # Issue templates for bugs, features, and docs
+    └── pull_request_template.md
 ```
 
 ---
@@ -61,8 +70,8 @@ FlexiBot/
 
 1. Clone the repository:  
    ```bash  
-   git clone https://github.com/your-username/FlexiBot.git  
-   cd FlexiBot  
+   git clone https://github.com/mksinha01/Flexi-Bot.git  
+   cd Flexi-Bot  
    ```  
 
 2. Install dependencies:  
@@ -96,10 +105,63 @@ This project was built by:
 
 ## 🤝 Contributing  
 
-Contributions are welcome! If you'd like to contribute, please:  
-1. Fork the repository.  
-2. Create a new branch for your feature or bugfix.  
-3. Submit a pull request.  
+We welcome contributions to FlexiBot! Whether you're fixing bugs, adding features, or improving documentation, your help is appreciated.
+
+### Quick Start for Contributors
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes
+4. Test your changes thoroughly
+5. Commit your changes (`git commit -m 'Add amazing feature'`)
+6. Push to the branch (`git push origin feature/amazing-feature`)
+7. Open a Pull Request
+
+### Ways to Contribute
+- 🐛 **Report bugs** using our bug report template
+- 💡 **Suggest features** using our feature request template  
+- 📝 **Improve documentation** 
+- 🧑‍💻 **Submit code changes**
+- 🔧 **Add support for new AI models**
+- 🧪 **Add tests and improve code quality**
+
+Please read our [Contributing Guidelines](CONTRIBUTING.md) for detailed information about our development process, coding standards, and how to submit contributions.
+
+### Development Setup
+```bash
+# Clone and setup
+git clone https://github.com/mksinha01/Flexi-Bot.git
+cd Flexi-Bot
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+
+# Configure AWS credentials for Bedrock access
+aws configure
+
+# Run the application
+streamlit run app.py
+```  
+
+---
+
+---
+
+## 📋 Issues and Support
+
+### Reporting Issues
+If you encounter any problems or have suggestions, please use our issue templates:
+- 🐛 [Bug Report](.github/ISSUE_TEMPLATE/bug_report.md) - Report bugs or unexpected behavior
+- 💡 [Feature Request](.github/ISSUE_TEMPLATE/feature_request.md) - Suggest new features or improvements  
+- 📝 [Documentation Issue](.github/ISSUE_TEMPLATE/documentation.md) - Report documentation problems
+
+### Getting Help
+- Check existing [issues](https://github.com/mksinha01/Flexi-Bot/issues) for solutions
+- Read our [Contributing Guidelines](CONTRIBUTING.md)
+- Review the documentation in this README
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -107,7 +169,8 @@ Contributions are welcome! If you'd like to contribute, please:
 
 - Thanks to **AWS Bedrock** for providing powerful AI models.  
 - Thanks to **LangChain** for simplifying document processing and retrieval.  
-- Thanks to **Streamlit** for making it easy to build interactive web apps.  
+- Thanks to **Streamlit** for making it easy to build interactive web apps.
+- Thanks to all our [contributors](https://github.com/mksinha01/Flexi-Bot/graphs/contributors)!  
 
 ---
 
